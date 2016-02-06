@@ -64,8 +64,12 @@ l(y) = \int_a^b |\gamma'(t)| \, dt = \int_a^b \sqrt{x'(t)^2 + y'(t)^2} \, dt
 is the length of the curve. 
 \end{exercise}
  
-\begin{proof}
-
+\begin{proof} We have that 
+\begin{align*}
+\left| \int_{\gamma} f(z) \right| &= \left| \int_a^b f(\gamma(t)) \gamma'(t) \, dt \right| \leq \int_a^b |f(\gamma(t))||\gamma'(t)| \, dt = \int_a^b M|\gamma'(t)| \, dt \\
+&= M\int_a^b |\gamma'(t)| \, dt = Ml(\gamma)
+\end{align*}
+Where the inequality is from Exercise 1
 \end{proof}
 
 \begin{exercise}{3} Let $\gamma$ be the arc of the circle $|z| = 2$ in the first quadrant $(x,y>0)$. Establish the inequality
@@ -79,16 +83,19 @@ without performing the integral explicitly.
 
 \end{proof}
 
-\begin{exercise}{4} 
+\begin{exercise}{4} Compute $\int_{\gamma} f(z) \, dz$ for the following 
 \end{exercise}
  
-\noindent a) {\em Proof}.
+\noindent a) $f(z) = -y^2 + x^2 - 2ixy$ and $\gamma$ the straight line from $0$ to $-1-i$. \\ \\ 
+{\em Proof}.
 $\hfill \qed$ \\
 
-\noindent b) {\em Proof}.
+\noindent b) $f(z) = (2+z)/z$ and $\gamma$ the semi-circle $z = e^{i\theta}$, $0 \leq \theta \leq \pi$. \\ \\
+{\em Proof}.
 $\hfill \qed$ \\
 
-\noindent c) {\em Proof}.
+\noindent c) $f(z) = 1/z$ and $\gamma$ any path in the right half plane $\text{Re}(z) \geq 0$ beginning at $-i$, ending at $i$, avoiding the origin. \\ \\ 
+{\em Proof}.
 $\hfill \qed$ 
 
 \begin{exercise}{5} Let $f,g$ be continuous functions, $c_1,c_2$ complex constants, and $\gamma,\gamma_1,\gamma_2$ piecewise smooth curves. Show that
@@ -105,6 +112,9 @@ $\hfill \qed$ \\
 
 \noindent b) $\int_{-\gamma} f = -\int_{\gamma} f$ \\ \\
 {\em Proof}.
+\begin{align*}
+\int_{-\gamma} f = \int_a^b f(\gamma(t)) (-\gamma'(t)) \, dt = - \int_a^b f(\gamma(t)) \gamma'(t) \, dt = -\int_{\gamma} f
+\end{align*}
 $\hfill \qed$ \\
 
 \noindent c) $\int_{\gamma_1 + \gamma_2} f = \int_{\gamma_1} f + \int_{\gamma_2} f$ \\ \\ 
